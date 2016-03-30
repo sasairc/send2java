@@ -95,12 +95,13 @@ int send2java(s2j_t* s2j)
             return -1;
         case    0:
             execlp(s2j->java, "", "-jar", s2j->jar, s2j->file, NULL);
+//          execlp(s2j->java, "", s2j->jar, s2j->file, NULL);
 
             fprintf(stderr, "%s: %s: not found\n", 
                     PROGNAME, s2j->java);
             exit(errno);
         default:
-            wait(&status);
+            waitpid(0, &status, WNOHANG);
     }
 
     return 0;

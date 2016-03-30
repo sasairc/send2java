@@ -16,15 +16,15 @@ send2java
 
 `-j, --java`及び`-r, --jar`オプションへの引数は、`~/.send2javarc`へ保存されます。
 
-### *-j, --java=JAVA*
+#### -j, --java=JAVA
 
 Java実行環境を指定します。
 
-### *-r, --jar=JAR*
+#### -r, --jar=JAR
 
 `*.jar`コンテナを指定します。
 
-### *-f, --file=FILE*
+#### -f, --file=FILE
 
 その他、引数として与えたいファイルを指定します。		
 ここで指定されたパスは、絶対パスとしてJREへ与えられます。
